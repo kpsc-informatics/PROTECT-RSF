@@ -13,4 +13,4 @@ Random Survival Forest model in 'Prediction Model for Detection of Sporadic Panc
 **Step3 - Final model**: The final model comes from the winning model from last step, which is the RSF model that contains all 5 selected variables. <br />
 
 **Step4 - Prediction**: Make prediction based on the final model and calculate c-index in validation data. Code: <br />
-[RSF_prediction.R](https://github.com/kpsc-informatics/PROTECT-RSF/blob/main/variable_selection_cindex.R)<br />
+[RSF_prediction.R](https://github.com/kpsc-informatics/PROTECT-RSF/blob/main/rsf_prediction.R)<br />
