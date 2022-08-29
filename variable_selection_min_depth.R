@@ -1,9 +1,10 @@
 ################################################################################
 ##  This program is used to perform variable pre-selection based on the       ##
 ##  minimum depth in Random Servival Forest Model.                            ##
-##  Input(s): dataset contains all the candidate variable with time and event ##
+##  Input(s): dataset contains all the candidate predictors and the outcome   ##
+##            (time-to-event).                                                ##
 ##  Parameter(s): (1) threshold for minimum depth                             ##
-##                (2) seed number if needed                                   ##
+##                (2) seed number (optional)                                  ##
 ##  Output(s): a list contains all selected variables with their minimum depth##
 ################################################################################
 
@@ -23,15 +24,18 @@ options(scipen=999)
 ### Reading SAS format Training data
 training_dt<-read_sas('~path/training/data')
 
-### transfer categorical variables to factors
+### transfer categorical variables to factors 
+### (using one of the categorical variables var_404 as an example)
 training_dt$var_404<-as.factor(training_dt$var_404)
 training_dt<-as.data.frame(training_dt)
 
-### list include all predictors
+### list include all predictors 
+### exclude patient_ID, outcome status, time-to-event variable, and other variables 
+### that are not for the purpose of prediction
 incol_list <- colnames(training_dt)
-incol_list <- incol_list[-which(incol_list %in% c("MRN", "pdac_18mos_num", "daysfu"))]
+incol_list <- incol_list[-which(incol_list %in% c("Patient_ID", "pdac_18mos_num", "daysfu"))]
 
-### setting hyperparameters in RSF
+### setting hyperparameters for RSF
 ntree=20
 nodedepth =7
 nsplit=0
