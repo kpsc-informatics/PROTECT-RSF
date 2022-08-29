@@ -3,8 +3,6 @@ Random Survival Forest model in 'Prediction Model for Detection of Sporadic Panc
 
 # Example of use <br />
 
-**Training Sample Code**:  <br />
-[Training Sample Code.R](https://github.com/kpsc-informatics/PROTECT-RSF/blob/main/variable_selection_cindex.R)<br />
+**Training Sample Code**: [Training Sample Code.R](https://github.com/kpsc-informatics/PROTECT-RSF/blob/main/variable_selection_cindex.R)<br />
 
-**Validation Sample Code**: <br />
-[Validation Sample Code.R](https://github.com/kpsc-informatics/PROTECT-RSF/blob/main/rsf_prediction.R)<br />
+**Validation Sample Code**: [Validation Sample Code.R](https://github.com/kpsc-informatics/PROTECT-RSF/blob/main/rsf_prediction.R)<br />
