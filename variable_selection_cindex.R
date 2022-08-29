@@ -3,7 +3,7 @@
 ##  process with respect to c-index.                                          ##
 ##  Input(s): dataset contains all the candidate variable with time and event ##
 ##  Parameter(s): (1) threshold for c-index                                   ##
-##                (2) seed number if needed                                   ##
+##                (2) seed number (optional)                                  ##
 ##                (3) forced in variable in the model                         ##
 ##  Output(s): a dataset that contains variable name and c-index              ##
 ################################################################################
