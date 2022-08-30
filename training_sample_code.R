@@ -1,11 +1,10 @@
 ################################################################################
-##  This program is used to perform variable selection in a forward selection ##
-##  process with respect to c-index.                                          ##
-##  Input(s): dataset contains all the candidate variables, outcome, and time ##
-##            to event                                                        ##
+##  Model Training                                                            ## 
+##  Input(s): dataset contains all the candidate variables, event, and time   ##
+##            to event                                                        ##                                                                                                 
 ##  Parameter(s): (1) threshold for c-index                                   ##
 ##                (2) seed number (optional)                                  ##
-##                (3) forced in variable in the model                         ##
+##                (3) variables forced in the model                           ##
 ##  Output(s): a dataset that contains variable name and c-index              ##
 ################################################################################
 
