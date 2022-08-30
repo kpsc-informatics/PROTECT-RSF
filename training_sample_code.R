@@ -1,7 +1,8 @@
 ################################################################################
 ##  This program is used to perform variable selection in a forward selection ##
 ##  process with respect to c-index.                                          ##
-##  Input(s): dataset contains all the candidate variables with time and event##
+##  Input(s): dataset contains all the candidate variables, outcome, and time ##
+##            to event                                                        ##
 ##  Parameter(s): (1) threshold for c-index                                   ##
 ##                (2) seed number (optional)                                  ##
 ##                (3) forced in variable in the model                         ##
@@ -32,7 +33,7 @@ for(var in categorical_list) {## categorical_list is a set containing all catego
 training_dt<-as.data.frame(training_dt)
 
 ### list include all predictors
-### 
+### remove outcome, follow-up time, and all other variables not for prediction
 incol_list <- colnames(training_dt)
 incol_list <- incol_list[-which(incol_list %in% c("Patient_ID", "event", "daysfu"))]
 
