@@ -1,5 +1,5 @@
 ################################################################################
-##  This program is to provide sample codes to update/validate the KPSC model ##
+##  Update/validate the KPSC model                                            ##
 ##  by using the same predictors selected by the current study.               ##
 ##  Input(s): dataset contains all the selected variable with time and event  ##
 ################################################################################
