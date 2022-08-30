@@ -25,8 +25,10 @@ options(scipen=999)
 ### Reading SAS format Training data
 training_dt<-read_sas('~path/to/training/data')
 
-### transfer categorical variables to factors
-training_dt$var_404<-as.factor(training_dt$var_404)
+### transfer all categorical variables to factors
+for(var in categorical_list) {## categorical_list is a set containing all categorical variables 
+  training_dt$var<-as.factor(training_dt$var)
+}
 training_dt<-as.data.frame(training_dt)
 
 ### list include all predictors
